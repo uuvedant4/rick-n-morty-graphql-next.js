@@ -5,7 +5,7 @@ export const { getClient } = registerApolloClient(() => {
   return new ApolloClient({
     cache: new InMemoryCache(),
     link: new HttpLink({
-      uri: "http://localhost:3000/api/graphql",
+      uri: "https://rick-n-morty-graphql-next-js.vercel.app/api/graphql",
     }),
   });
 });
