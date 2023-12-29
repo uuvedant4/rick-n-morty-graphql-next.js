@@ -3,13 +3,11 @@ import styles from "./page.module.css";
 import { gql } from "@apollo/client";
 
 const query = gql`
-  query getCharacters {
-    characters {
-      results {
-        name
-        id
-        image
-      }
+  query getAliens {
+    aliens {
+      id
+      image
+      name
     }
   }
 `;
@@ -18,7 +16,7 @@ const getCharacters = async () => {
   const { data } = await getClient().query({
     query,
   });
-  return data.characters.results;
+  return data.aliens;
 };
 
 interface Character {
@@ -30,7 +28,6 @@ interface Character {
 
 export default async function Home() {
   const characters = await getCharacters();
-
   return (
     <div className={styles.charactersContainer}>
       {characters.map((character: Character) => {
