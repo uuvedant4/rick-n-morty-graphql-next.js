@@ -1,0 +1,35 @@
+.charactersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 26px;
+  gap: 28px;
+}
+
+.characterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid rgb(177, 176, 176);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.characterContainer:hover {
+  transform: scale(1.04);
+}
+
+.characterImage {
+  object-fit: cover;
+}
+
+.characterName {
+  font-size: 18px;
+  padding: 5px;
+  color: white;
+}
